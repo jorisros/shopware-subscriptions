@@ -46,5 +46,11 @@
             <name>daysProforma</name>
             <label>Days of proforma</label>
         </input-field>
+
+        <component name="sw-entity-single-select">
+            <name>acceptedInvoiceProducts</name>
+            <entity>product</entity>
+            <label>Accepted subscription products</label>
+        </component>
     </card>
 </config>
