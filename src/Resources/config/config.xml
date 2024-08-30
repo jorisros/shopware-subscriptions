@@ -4,12 +4,42 @@
         xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
 
     <card>
-        <title>Minimal configuration</title>
+        <title>Configuration</title>
 
-        <input-field type="text">
-            <name>textField</name>
-            <label>Test field with default value</label>
-            <defaultValue>test</defaultValue>
+        <input-field type="single-select">
+            <name>interval</name>
+            <label>Interval</label>
+            <options>
+                <option>
+                    <id>daily</id>
+                    <name>Daily - Every day</name>
+                </option>
+                <option>
+                    <id>weekly</id>
+                    <name>Weekly - Every 7 days</name>
+                </option>
+                <option>
+                    <id>bi-weekly</id>
+                    <name>Bi-Weekly - Every 14 days</name>
+                </option>
+                <option>
+                    <id>montly</id>
+                    <name>Montly - Every 30 days</name>
+                </option>
+                <option>
+                    <id>quarterly</id>
+                    <name>Quarterly - Every 3 months (90 days)</name>
+                </option>
+                <option>
+                    <id>semi-annual</id>
+                    <name>Semi-Annual - Every 6 months (180 days)</name>
+                </option>
+                <option>
+                    <id>annual</id>
+                    <name>Annual - Once a year (365 days)</name>
+                </option>
+            </options>
+            <defaultValue>montly</defaultValue>
         </input-field>
     </card>
 </config>
