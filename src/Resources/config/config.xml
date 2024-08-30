@@ -41,5 +41,10 @@
             </options>
             <defaultValue>montly</defaultValue>
         </input-field>
+
+        <input-field type="int">
+            <name>daysProforma</name>
+            <label>Days of proforma</label>
+        </input-field>
     </card>
 </config>
