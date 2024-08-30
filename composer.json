@@ -1,0 +1,51 @@
+{
+  "name": "jorisros/shopware-subsciptions",
+  "description": "Plugin for subsciptions in Shopware",
+  "version": "0.0.1",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joris Ros",
+      "email": "developer@jorisros.nl"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^8.2||^8.3",
+    "shopware/core": "^v6.6.5.0"
+  },
+  "require-dev": {},
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "extra": {
+    "shopware-plugin-class": "JorisRos\\Shopware\\Subsciptions\\Subsciptions",
+    "copyright": "(c) by Joris Ros",
+    "label": {
+      "en-GB": "Plugin for subsciptions in Shopware"
+    },
+    "description": {
+      "en-GB": "Plugin for subsciptions in Shopware"
+    },
+    "manufacturerLink": {
+      "en-GB": "https://store.example.dev/en/example-dev.html"
+    },
+    "supportLink": {
+      "en-GB": "https://docs.example.dev/en"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "JorisRos\\Shopware\\Subsciptions\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "JorisRos\\Shopware\\Subsciptions\\Tests\\": "tests/"
+    }
+  },
+  "suggest": {},
+  "conflict": {}
+}
