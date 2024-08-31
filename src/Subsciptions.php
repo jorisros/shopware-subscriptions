@@ -2,6 +2,7 @@
 
 namespace JorisRos\Shopware\Subsciptions;
 
+use Doctrine\DBAL\Connection;
 use Shopware\Core\Framework\Plugin;
 use Shopware\Core\Framework\Plugin\Context\ActivateContext;
 use Shopware\Core\Framework\Plugin\Context\DeactivateContext;
@@ -11,6 +12,7 @@ use Shopware\Core\Framework\Plugin\Context\UpdateContext;
 
 class Subsciptions extends Plugin
 {
+    public const TABLE_NAME = 'jrs_subsciptions';
     public function install(InstallContext $installContext): void
     {
         // Do stuff such as creating a new payment method
@@ -25,6 +27,8 @@ class Subsciptions extends Plugin
         }
 
         // Remove or deactivate the data created by the plugin
+        $connection = $this->container->get(Connection::class);
+        $connection->executeQuery('DROP TABLE IF EXISTS ' . self::TABLE_NAME);
     }
 
     public function activate(ActivateContext $activateContext): void
